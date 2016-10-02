@@ -1,0 +1,38 @@
+<div class="container">
+	<style>
+		h1.top {font-size: 6em;}
+		h3.sub {text-align: center;}
+		div.create {float:left; padding-left: 50px; padding-top: 20px; padding-bottom: 20px}
+		div.join {float:right; padding-right: 50px; padding-top: 20px; padding-bottom: 20px}
+		h1.h {text-align: center; padding-top: 300px}
+		div.how {align-items: center; padding-bottom: 100px}
+		.btn-lg {height: 200px; width: 400px; text-align: center; vertical-align: center}
+		h6.note {color: red; text-align: center;}
+	</style>
+	
+	<h6 class="note">Note: As promised, i am learning to hack my own prototype. please <a href="#bottom">Click Here </a> to go to the UPDATES</h3>
+
+	<center>		
+		<h1 class="top">Welcome to Cruise My Trip</h1>
+		<h3 class="sub">We connect you to those who can</h1>			
+	</center>
+
+	<div class="create">
+		<%= link_to "Create", create_path, class: "btn btn-primary btn-lg" %>
+	</div> 
+	
+	<div class="join">
+		<%= link_to "Join", join_path, class: "btn btn-primary btn-lg" %>
+	</div>
+	
+	<h1 class="h">How it Works</h1>
+	
+	<div class="how">
+		<%= image_tag "howitworks.jpg" %>
+	</div>
+	
+
+	<%= render 'layouts/updates' %>
+	
+
+</div>
