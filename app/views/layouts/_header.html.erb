@@ -30,8 +30,13 @@ li.left {float: left;}
         <button type="submit" class="btn btn-default">Search for Outings</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li class="left"><%= link_to "Sign up", "#" %></li>
-        <li class="left"><%= link_to "Sign in", "#" %></li>
+        <% if user_signed_in? %>
+          <li class="left"><%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+        
+        <% else %>
+          <li class="left"><%= link_to "Sign in", new_user_session_path %></li>
+          <li class="left"><%= link_to "Sign up", new_user_registration_path %></li>
+        <% end %>
 
         </li>
       </ul>
